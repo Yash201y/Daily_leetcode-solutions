@@ -1,0 +1,16 @@
+class Solution {
+public:
+    int xorOperation(int n, int start) {
+        vector<int> nums;
+        while(n!=0){
+            nums.push_back(start);
+            start+=2;
+            n--;
+        }
+        int XOR1=nums[0];
+        for(int i=1;i<nums.size();i++){
+            XOR1=XOR1^nums[i];
+        }
+        return XOR1;
+    }
+};
